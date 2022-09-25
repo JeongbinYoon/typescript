@@ -13,5 +13,5 @@
   student[0]; // name
   student[1]; // 123
 
-  const [name, age] = student;
+  const [name, age] = student; // 이렇게 접근하면 좀 더 명확하게 확인할 수는 있음
 }
