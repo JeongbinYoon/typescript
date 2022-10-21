@@ -1,7 +1,7 @@
 /**
  * Let's make a game 🕹
  */
-type Direction = "up" | "down" | "left" | "right";
+type Direction = "up" | "down" | "left" | "right" | "he";
 type Position = {
   x: number;
   y: number;
@@ -25,8 +25,12 @@ function move(direction: Direction): Position {
     case "right":
       position.x += 1;
       break;
+    case "he":
+      position.x += 1;
+      break;
     default:
-      new Error("Unknown direction");
+      const invalid: never = direction;
+      new Error(`Unknown direction: ${invalid}`);
   }
   return position;
 }
